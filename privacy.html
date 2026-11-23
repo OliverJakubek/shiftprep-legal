@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datenschutzerklärung – ShiftPrep</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f7f8fa;
+      color: #1e293b;
+      line-height: 1.65;
+      margin: 0;
+      padding: 24px 16px;
+    }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 32px 28px;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(15, 23, 42, 0.04);
+    }
+    h1 { font-size: 1.75rem; margin-top: 0; color: #0f172a; }
+    h2 { font-size: 1.15rem; margin-top: 28px; color: #334155; }
+    p, li { font-size: 0.98rem; color: #334155; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 8px; }
+    .meta { color: #64748b; font-size: 0.9rem; margin-bottom: 24px; }
+    a { color: #3b5998; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer { margin-top: 32px; padding-top: 16px; border-top: 1px solid #e2e8f0; font-size: 0.9rem; color: #64748b; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Datenschutzerklärung für ShiftPrep</h1>
+    <p class="meta">Stand: November 2026 · <a href="index.html">Zum App-Support</a></p>
+
+    <h2>1. Verantwortlicher</h2>
+    <p>
+      Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:<br />
+      <strong>Oliver Jakubek</strong><br />
+      Westerholter Straße 82<br />
+      45894 Gelsenkirchen, Deutschland<br />
+      E-Mail: <a href="mailto:shiftprep.support@gmail.com">shiftprep.support@gmail.com</a>
+    </p>
+
+    <h2>2. Grundsatz: Lokale Datenspeicherung in der App</h2>
+    <p>ShiftPrep wurde nach dem Prinzip der Datensparsamkeit entwickelt. Alle von dir in der App eingegebenen Planungs-, Schicht- und Ernährungsdaten werden in der App selbst ausschließlich lokal auf deinem Endgerät gespeichert.</p>
+    <ul>
+      <li>Es ist kein Benutzerkonto und keine Registrierung erforderlich.</li>
+      <li>Wir betreiben keinen eigenen Server zur dauerhaften Speicherung deiner Planungsdaten. Der freiwillige Foto-Dienstplanimport ist eine Ausnahme: Nur wenn du ihn nach einem ausdrücklichen Hinweis startest, wird das gewählte Bild zur Erkennung über Cloudflare Workers an OpenRouter und Google Gemini übertragen.</li>
+      <li>Es findet kein Werbe-Tracking und keine Weitergabe deiner Daten an Werbenetzwerke statt.</li>
+      <li>Weitere externe Wege: Support-E-Mail, von dir geöffnete Fachquellen-Links und ein gegebenenfalls aktiviertes Apple-iCloud-Backup (siehe Abschnitte 4 und 6).</li>
+    </ul>
+
+    <h2>3. Welche Daten in der App lokal verarbeitet werden</h2>
+    <p>Um dir die Funktionen der App bereitzustellen, speichert ShiftPrep folgende Informationen lokal auf deinem iPhone, unter anderem in SQLite-Datenbanken und als App-Dateien (z. B. eigene Rezeptfotos):</p>
+    <p>Soweit diese Angaben Rückschlüsse auf deine Gesundheit zulassen, verarbeiten wir sie für Energiebedarf und Mahlzeitenplan nur nach deiner gesonderten, ausdrücklich erteilten Einwilligung (Art. 6 Abs. 1 lit. a und Art. 9 Abs. 2 lit. a DSGVO). Du kannst die Einwilligung ablehnen; dann bleiben persönliche App-Funktionen gesperrt. Die App speichert die Einwilligung mit Zeitpunkt lokal auf deinem Gerät. Für die Bereitstellung der übrigen von dir gewünschten Funktionen kommt außerdem Art. 6 Abs. 1 lit. b DSGVO in Betracht.</p>
+    <ul>
+      <li><strong>Körper-, Aktivitäts- und Zieldaten:</strong> Geschlecht, Alter, Größe, Gewicht, Aktivitätsniveau und persönliches Ernährungsziel (zur Berechnung deines geschätzten Energie- und Nährstoffbedarfs).</li>
+      <li><strong>Schicht- und Kalenderdaten:</strong> Deine hinterlegten Schichtzeiten, Dienstkürzel, Ausschlaftage und Aktivitäten (zur Anpassung deines Tages-Flows und der Live-Activity-Anzeige auf dem Sperrbildschirm).</li>
+      <li><strong>Foto-Dienstplanimport (optional):</strong> Erkannte Kürzel, deine Zuordnungen zu Dienstvorlagen, Urlaub, freien Tagen oder privaten Terminen sowie ein ausgewählter Name zur Suche im Plan werden lokal gespeichert. Bei einem Team- oder Abteilungsplan können im Bild auch Namen anderer Personen stehen, die zur Auswahl im aktuellen Importvorgang angezeigt werden können. Das Bild und gegebenenfalls dein Suchname werden über Cloudflare Workers an OpenRouter/Google Gemini nur für die angeforderte Erkennung deiner Dienste übertragen. ShiftPrep und der zustandslose Proxy speichern das Bild nicht dauerhaft; vorübergehende Gerätedateien sind möglich. Der Fotoimport verfügt vor jeder ersten Übertragung über eine eigene ausdrückliche Zustimmung.</li>
+      <li><strong>Ernährungs-, Einkaufs- und Vorratsdaten:</strong> Geplante und bestätigte Mahlzeiten, eigene Rezepte inklusive eigener Rezeptfotos, Rezeptbewertungen (Favoriten), Einkaufslisten und Vorratsbestände.</li>
+      <li><strong>Sport- und Bewegungsdaten:</strong> Manuell erfasste Trainingseinheiten und der daraus berechnete Netto-Sportbonus.</li>
+    </ul>
+
+    <h2>4. Apple-Systemdienste &amp; App Store</h2>
+    <ul>
+      <li><strong>Apple App Store:</strong> Beim Herunterladen und Aktualisieren der App werden durch Apple (Apple Distribution International Ltd., Hollyhill Industrial Estate, Hollyhill, Cork, Irland) technisch notwendige Daten (z. B. Apple-ID, Geräteinformationen, IP-Adresse) verarbeitet. Hierauf haben wir keinen Einfluss. Es gelten die Datenschutzbestimmungen von Apple.</li>
+      <li><strong>iOS Live Activities / Widgets:</strong> Sofern du die Anzeige laufender Schichten auf dem Sperrbildschirm nutzt, werden die hierfür nötigen Schichtzeiten ausschließlich lokal über die iOS-System-Schnittstelle (ActivityKit) auf deinem Gerät verarbeitet.</li>
+      <li><strong>iCloud-Backup (optional durch deine Geräteeinstellungen):</strong> Sofern du auf deinem iPhone das automatische iCloud-Backup aktiviert hast, können lokale App-Daten durch Apple verschlüsselt in deinem persönlichen iCloud-Speicher gesichert werden. Du kannst dies jederzeit in den iOS-Einstellungen unter „iCloud“ verwalten.</li>
+    </ul>
+
+    <h2>5. Speicherdauer und Löschung deiner Daten</h2>
+    <p>Die lokalen Daten bleiben gespeichert, bis du die jeweiligen Einträge oder die App löschst. Da alle App-Daten lokal auf deinem Gerät liegen, behältst du die volle Kontrolle:</p>
+    <ul>
+      <li>Du kannst einzelne Einträge (Schichten, Mahlzeiten, Vorräte, eigene Rezepte) jederzeit direkt in der App bearbeiten oder löschen.</li>
+      <li>Du kannst deine Einwilligung für gesundheitsbezogene Daten jederzeit im Profil über „Einwilligung widerrufen &amp; alle Daten löschen“ zurücknehmen. Die App löscht dann die lokalen App-Daten und den gespeicherten Einwilligungszeitpunkt. Bis du erneut einwilligst, werden persönliche Daten nicht geladen. Der Widerruf berührt die Rechtmäßigkeit der Verarbeitung davor nicht.</li>
+      <li>Beim Löschen der App entfernt iOS die zugehörigen lokalen App-Daten. Bereits erstellte iCloud-Backups musst du gegebenenfalls separat in deinen Apple-iCloud-Einstellungen verwalten.</li>
+    </ul>
+
+    <h2>6. Kontaktaufnahme per E-Mail</h2>
+    <p>Wenn du uns per E-Mail (z. B. für Support oder Feedback) kontaktierst, werden deine angegebenen Daten (E-Mail-Adresse, Inhalt der Nachricht) ausschließlich zur Bearbeitung deiner Anfrage verarbeitet (Art. 6 Abs. 1 lit. b bzw. lit. f DSGVO) und gelöscht, sobald dein Anliegen abgeschlossen ist und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+
+    <h2>7. Deine Rechte nach der DSGVO</h2>
+    <p>Dir stehen im Rahmen der gesetzlichen Vorgaben folgende Rechte zu:</p>
+    <ul>
+      <li>Recht auf Auskunft (Art. 15 DSGVO)</li>
+      <li>Recht auf Berichtigung (Art. 16 DSGVO)</li>
+      <li>Recht auf Löschung (Art. 17 DSGVO)</li>
+      <li>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+      <li>Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</li>
+      <li>Recht auf Beschwerde bei einer Datenschutz-Aufsichtsbehörde (Art. 77 DSGVO), z. B. bei der für deinen Wohnort zuständigen Landesdatenschutzbehörde (in NRW: Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen – LDI NRW).</li>
+    </ul>
+
+    <footer>
+      ShiftPrep – Schicht- &amp; Ernährungsplanung · <a href="index.html">Support &amp; Kontakt</a>
+    </footer>
+  </main>
+</body>
+</html>
