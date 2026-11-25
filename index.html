@@ -3,64 +3,200 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Support – ShiftPrep</title>
+  <title>ShiftPrep – Schicht-, Mahlzeiten- &amp; Einkaufsplaner</title>
+  <meta name="description" content="Endlich eine App, die 24h-Dienste und Nachtschichten versteht. Entwickelt aus dem Schichtdienst für Rettungsdienst, Feuerwehr, Pflege &amp; Klinik." />
   <style>
+    :root {
+      --bg: #0e141b;
+      --card: #161f29;
+      --border: #253342;
+      --text: #f3f6fa;
+      --muted: #a6b4c3;
+      --accent: #1d7867;
+      --accent-hover: #24917d;
+      --secondary-bg: #1e2a37;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: #f7f8fa;
-      color: #1e293b;
-      line-height: 1.65;
-      margin: 0;
-      padding: 24px 16px;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 24px 16px 48px;
     }
-    main {
-      max-width: 720px;
+    .container {
+      max-width: 680px;
       margin: 0 auto;
-      background: #ffffff;
-      padding: 32px 28px;
-      border-radius: 16px;
-      box-shadow: 0 2px 12px rgba(15, 23, 42, 0.04);
     }
-    h1 { font-size: 1.75rem; margin-top: 0; color: #0f172a; }
-    h2 { font-size: 1.15rem; margin-top: 28px; color: #334155; }
-    h3 { font-size: 1.02rem; margin-top: 20px; color: #1e293b; }
-    p, li { font-size: 0.98rem; color: #334155; }
-    .card {
-      background: #f1f5f9;
-      padding: 16px 20px;
+    header {
+      text-align: center;
+      padding: 24px 0 32px;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(29, 120, 103, 0.18);
+      color: #6fd6c2;
+      border: 1px solid rgba(29, 120, 103, 0.45);
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: clamp(1.75rem, 4vw, 2.35rem);
+      line-height: 1.2;
+      margin-bottom: 14px;
+      letter-spacing: -0.02em;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 540px;
+      margin: 0 auto 28px;
+    }
+    .cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-bottom: 14px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 22px;
       border-radius: 12px;
-      margin: 20px 0;
+      font-weight: 600;
+      font-size: 0.98rem;
+      text-decoration: none;
+      transition: background 0.15s ease, transform 0.1s ease;
     }
-    a { color: #3b5998; text-decoration: none; font-weight: 500; }
-    a:hover { text-decoration: underline; }
-    footer { margin-top: 32px; padding-top: 16px; border-top: 1px solid #e2e8f0; font-size: 0.9rem; color: #64748b; }
+    .btn:active { transform: scale(0.99); }
+    .btn-primary {
+      background: var(--accent);
+      color: #ffffff;
+    }
+    .btn-primary:hover { background: var(--accent-hover); }
+    .btn-secondary {
+      background: var(--secondary-bg);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-secondary:hover { background: #263545; }
+    .trust-line {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .features {
+      display: grid;
+      gap: 14px;
+      margin: 32px 0;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+    }
+    .card-step {
+      color: #6fd6c2;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .card h2 {
+      font-size: 1.12rem;
+      margin-bottom: 6px;
+    }
+    .card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .support-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      margin-top: 24px;
+      font-size: 0.93rem;
+      color: var(--muted);
+    }
+    .support-box a {
+      color: #6fd6c2;
+      text-decoration: none;
+    }
+    .support-box a:hover { text-decoration: underline; }
+    footer {
+      margin-top: 36px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 0.84rem;
+      color: var(--muted);
+    }
+    footer a {
+      color: var(--muted);
+      margin: 0 8px;
+    }
   </style>
 </head>
 <body>
-  <main>
-    <h1>ShiftPrep Support</h1>
-    <p>Hilfe, Fragen oder Feedback zur Schicht-, Mahlzeiten- und Einkaufsplanung mit <strong>ShiftPrep</strong>.</p>
+  <div class="container">
+    <header>
+      <div class="badge">Aus dem Schichtdienst · Für den Schichtdienst</div>
+      <h1>Endlich eine App, die 24h-Dienste und Nachtschichten versteht.</h1>
+      <p class="subtitle">
+        ShiftPrep ist dein ruhiger Schicht-, Mahlzeiten- &amp; Einkaufsplaner für Rettungsdienst, Feuerwehr, Pflege &amp; Klinik – ohne Mitternachts-Reset.
+      </p>
 
-    <div class="card">
-      <strong>Direkter Kontakt:</strong><br />
-      E-Mail: <a href="mailto:shiftprep.support@gmail.com">shiftprep.support@gmail.com</a><br />
-      <span style="font-size: 0.9rem; color: #64748b;">Wir antworten in der Regel innerhalb von 1–2 Werktagen.</span>
-    </div>
+      <div class="cta-group">
+        <a class="btn btn-primary" href="https://apple.com" target="_blank" rel="noopener">
+          Für iPhone laden (App Store)
+        </a>
+        <!-- Nach dem öffentlichen Google-Play-Release hier einfach den Play-Store-Link eintragen -->
+        <a class="btn btn-secondary" href="mailto:shiftprep.support@://gmail.com">
+          Android (Vorab-Test anfragen)
+        </a>
+      </div>
+      <div class="trust-line">100 % kostenlos · Kein Account · Alle Daten bleiben lokal auf deinem Gerät</div>
+    </header>
 
-    <h2>Häufige Fragen (FAQ)</h2>
+    <section class="features">
+      <div class="card">
+        <div class="card-step">01 · Kalender</div>
+        <h2>Dienstplan abfotografieren</h2>
+        <p>Früh-, Spät-, Nacht- und 24h-Dienste per Foto übernehmen oder manuell eintragen – deine Schichtwoche steht in Sekunden.</p>
+      </div>
 
-    <h3>Wo werden meine Daten gespeichert?</h3>
-    <p>Alle deine Schichtpläne, Körperdaten, Rezepte und Einkaufslisten werden ausschließlich lokal auf deinem iPhone gespeichert. Es gibt kein Benutzerkonto und keinen Cloud-Zwang.</p>
+      <div class="card">
+        <div class="card-step">02 · Energie &amp; Training</div>
+        <h2>Tages-Flow mit Sportbonus</h2>
+        <p>Kalorien und Mahlzeiten richten sich nach deinem biologischen Wach-Rhythmus – Training wird fair eingerechnet.</p>
+      </div>
 
-    <h3>Wie funktioniert der Foto-Dienstplanimport?</h3>
-    <p>Im Kalender kannst du über „Dienstplan aus Foto“ einen Screenshot deines Dienstplans auswählen und zuschneiden. Bei Abteilungsplänen mit mehreren Namen fragt ShiftPrep automatisch nach deiner Person und merkt sich deine Auswahl lokal. Deine Zuordnungen (Arbeitsschicht, Urlaub, Frei, Privater Termin oder Ignorieren) bleiben lokal für künftige Monate gespeichert.</p>
+      <div class="card">
+        <div class="card-step">03 · Meal Prep</div>
+        <h2>Rezepte &amp; Einkauf in einem Klick</h2>
+        <p>Passende Schicht-Rezepte für deine Woche antippen und alle Zutaten automatisch in einer Einkaufsliste bündeln.</p>
+      </div>
+    </section>
 
-    <h3>Wie kann ich meine Daten und Einwilligung löschen?</h3>
-    <p>Öffne in der App den Tab <strong>Profil</strong> und wähle ganz unten <strong>„Einwilligung widerrufen &amp; alle Daten löschen“</strong>. Damit werden sämtliche lokalen Daten und gespeicherten Einwilligungen vollständig von deinem Gerät entfernt.</p>
+    <section class="support-box">
+      <strong>Support &amp; Rückfragen:</strong><br />
+      Du hast Fragen zu ShiftPrep, möchtest Feedback geben oder am Android-Test teilnehmen? Schreib mir jederzeit an
+      <a href="mailto:shiftprep.support@gmail.com">shiftprep.support@gmail.com</a>.
+    </section>
 
     <footer>
-      Verantwortlich: Oliver Jakubek, Gelsenkirchen · <a href="privacy.html">Datenschutzerklärung</a>
+      <p>Verantwortlich / Impressum: Oliver Jakubek · Gelsenkirchen · <a href="mailto:shiftprep.support@gmail.com">shiftprep.support@gmail.com</a></p>
+      <p style="margin-top: 8px;">
+        <a href="privacy.html">Datenschutzerklärung</a>
+      </p>
     </footer>
-  </main>
+  </div>
 </body>
 </html>
