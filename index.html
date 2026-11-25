@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ShiftPrep – Schicht-, Mahlzeiten- &amp; Einkaufsplaner</title>
   <meta name="description" content="Endlich eine App, die 24h-Dienste und Nachtschichten versteht. Entwickelt aus dem Schichtdienst für Rettungsdienst, Feuerwehr, Pflege &amp; Klinik." />
+  <link rel="icon" type="image/png" href="icon.png" />
   <style>
     :root {
       --bg: #0e141b;
@@ -12,9 +13,7 @@
       --border: #253342;
       --text: #f3f6fa;
       --muted: #a6b4c3;
-      --accent: #1d7867;
-      --accent-hover: #24917d;
-      --secondary-bg: #1e2a37;
+      --accent: #6fd6c2;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -22,7 +21,7 @@
       background-color: var(--bg);
       color: var(--text);
       line-height: 1.6;
-      padding: 24px 16px 48px;
+      padding: 28px 16px 48px;
     }
     .container {
       max-width: 680px;
@@ -30,16 +29,34 @@
     }
     header {
       text-align: center;
-      padding: 24px 0 32px;
+      padding: 12px 0 32px;
+    }
+    .brand-row {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    .app-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 13px;
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+    .brand-name {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
     }
     .badge {
       display: inline-block;
       background: rgba(29, 120, 103, 0.18);
-      color: #6fd6c2;
+      color: var(--accent);
       border: 1px solid rgba(29, 120, 103, 0.45);
       font-size: 0.82rem;
       font-weight: 600;
-      padding: 5px 12px;
+      padding: 5px 13px;
       border-radius: 999px;
       margin-bottom: 16px;
     }
@@ -55,36 +72,52 @@
       max-width: 540px;
       margin: 0 auto 28px;
     }
-    .cta-group {
+    .store-badges {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 14px;
       justify-content: center;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
-    .btn {
+    .store-badge {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      padding: 14px 22px;
-      border-radius: 12px;
-      font-weight: 600;
-      font-size: 0.98rem;
-      text-decoration: none;
-      transition: background 0.15s ease, transform 0.1s ease;
-    }
-    .btn:active { transform: scale(0.99); }
-    .btn-primary {
-      background: var(--accent);
+      gap: 12px;
+      background: #000000;
       color: #ffffff;
+      border: 1px solid #3c4856;
+      border-radius: 12px;
+      padding: 10px 18px;
+      text-decoration: none;
+      min-width: 196px;
+      transition: transform 0.12s ease, border-color 0.15s ease, background 0.15s ease;
     }
-    .btn-primary:hover { background: var(--accent-hover); }
-    .btn-secondary {
-      background: var(--secondary-bg);
-      color: var(--text);
-      border: 1px solid var(--border);
+    .store-badge:hover {
+      border-color: #6fd6c2;
+      background: #080c10;
+      transform: translateY(-1px);
     }
-    .btn-secondary:hover { background: #263545; }
+    .store-badge svg {
+      width: 26px;
+      height: 26px;
+      flex-shrink: 0;
+    }
+    .store-text {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      line-height: 1.15;
+    }
+    .store-small {
+      font-size: 0.7rem;
+      color: #c8d2dc;
+      letter-spacing: 0.02em;
+    }
+    .store-big {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-top: 2px;
+    }
     .trust-line {
       font-size: 0.85rem;
       color: var(--muted);
@@ -101,7 +134,7 @@
       padding: 20px;
     }
     .card-step {
-      color: #6fd6c2;
+      color: var(--accent);
       font-size: 0.8rem;
       font-weight: 700;
       letter-spacing: 0.06em;
@@ -126,7 +159,7 @@
       color: var(--muted);
     }
     .support-box a {
-      color: #6fd6c2;
+      color: var(--accent);
       text-decoration: none;
     }
     .support-box a:hover { text-decoration: underline; }
@@ -147,19 +180,41 @@
 <body>
   <div class="container">
     <header>
+      <div class="brand-row">
+        <img class="app-icon" src="icon.png" alt="ShiftPrep App Icon" onerror="this.style.display='none'" />
+        <span class="brand-name">ShiftPrep</span>
+      </div>
+      <br />
       <div class="badge">Aus dem Schichtdienst · Für den Schichtdienst</div>
       <h1>Endlich eine App, die 24h-Dienste und Nachtschichten versteht.</h1>
       <p class="subtitle">
         ShiftPrep ist dein ruhiger Schicht-, Mahlzeiten- &amp; Einkaufsplaner für Rettungsdienst, Feuerwehr, Pflege &amp; Klinik – ohne Mitternachts-Reset.
       </p>
 
-      <div class="cta-group">
-        <a class="btn btn-primary" href="https://apple.com" target="_blank" rel="noopener">
-          Für iPhone laden (App Store)
+      <div class="store-badges">
+        <!-- Apple App Store Badge -->
+        <a class="store-badge" href="https://apple.com" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.96 6.32c.67-.81 1.12-1.94 1-3.07-.96.04-2.13.64-2.82 1.45-.61.7-.115 1.85-1.01 2.96 1.07.08 2.16-.53 2.83-1.34z"/>
+          </svg>
+          <span class="store-text">
+            <span class="store-small">Laden im</span>
+            <span class="store-big">App Store</span>
+          </span>
         </a>
-        <!-- Nach dem öffentlichen Google-Play-Release hier einfach den Play-Store-Link eintragen -->
-        <a class="btn btn-secondary" href="mailto:shiftprep.support@://gmail.com">
-          Android (Vorab-Test anfragen)
+
+        <!-- Google Play Badge (nach öffentlichem Play-Store-Release hier einfach den Play-Store-Link eintragen & Text auf "Jetzt bei / Google Play" ändern) -->
+        <a class="store-badge" href="mailto:shiftprep.support@://gmail.com">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#4285F4" d="M3.6 2.4c-.3.3-.5.8-.5 1.4v16.4c0 .6.2 1.1.5 1.4l.1.1 9.2-9.2v-.2L3.7 2.3l-.1.1z"/>
+            <path fill="#34A853" d="M16 15.5l-3.1-3.1v-.2L16 9.1l.1.1 3.6 2.1c1 .6 1 1.5 0 2.1l-3.6 2-.1.1z"/>
+            <path fill="#FBBC05" d="M16.1 15.4L12.9 12.2 3.6 21.5c.3.4.9.4 1.6 0l10.9-6.1z"/>
+            <path fill="#EA4335" d="M16.1 9L5.2 2.9c-.7-.4-1.3-.4-1.6 0l9.3 9.3L16.1 9z"/>
+          </svg>
+          <span class="store-text">
+            <span class="store-small">Android Vorab-Test</span>
+            <span class="store-big">Google Play</span>
+          </span>
         </a>
       </div>
       <div class="trust-line">100 % kostenlos · Kein Account · Alle Daten bleiben lokal auf deinem Gerät</div>
